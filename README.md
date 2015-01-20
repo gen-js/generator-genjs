@@ -2,7 +2,7 @@
 
 This is a Yeoman generator to create GenJS for code generation in javascript.
 
-You can contact me for questions : l.chaboud@gmail.com
+You can contact me for questions : genjs1026@gmail.com
 
 # Projects organization
 
@@ -336,4 +336,4 @@ Strings value have these functions :
 
 # Questions
 
-You can send an email to contact me : l.chaboud@gmail.com
+You can send an email to contact me : genjs1026@gmail.com
