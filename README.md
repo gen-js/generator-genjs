@@ -322,6 +322,12 @@ This ```entity``` variable is available only if the template name has the expres
 #### ```entities```
 For all templates, the variable ```entities``` targets the array which contains all entities of the ```entities.js``` file.
 
+### Lowercase and Uppercase
+
+Strings value have these functions :
+* str.a() : the first letter is in lowercase
+* str.A() : the first letter is in uppercase
+
 # Questions
 
 You can send an email to contact me : l.chaboud@gmail.com
