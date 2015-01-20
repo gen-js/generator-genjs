@@ -25,16 +25,16 @@ var GenjsGenerator = yeoman.generators.Base.extend({
 
         try {
             var currentPaths = process.cwd().split(path.sep);
-            var currentDir = currentPaths[currentPaths.length-1];
+            var parentDir = currentPaths[currentPaths.length-2];
         } catch(e) {
-            currentDir = "myproject";
+            var parentDir = "myproject";
         }
 
         var prompts = [{
             type: 'input',
             name: 'projectName',
             message: 'Project name',
-            default: currentDir
+            default: parentDir
         },{
             type: 'input',
             name: 'projectVersion',
@@ -49,7 +49,7 @@ var GenjsGenerator = yeoman.generators.Base.extend({
 
         this.prompt(prompts, function (props) {
             this.currentDir = props.currentDir;
-            this.targetDir = path.join('..',props.projectName);
+            this.targetDir = path.join('..');
             this.projectName = props.projectName;
             this.projectDir = props.projectName;
             this.projectVersion = props.projectVersion;
@@ -73,7 +73,7 @@ var GenjsGenerator = yeoman.generators.Base.extend({
             this.mkdir(this.currentDir);
         }
 */
-        this.template('main.js',process.cwd()+'/'+this.projectName);
+        // this.mkdir(process.cwd()+'/'+this.projectName);
 
         this.template('main.js',process.cwd()+'/main.js');
         this.template('gen.js',process.cwd()+'/gen.js');
