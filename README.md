@@ -59,7 +59,7 @@ node main.js
 
 ## Model
 
-Define your model in the file ```genjs/model/entities.js``` :
+### ```genjs/model/entities.js```
 ```
 var entities = {
   "book": {
@@ -85,9 +85,7 @@ module.exports=entities;
 
 ## Templates
 
-In ```genjs/templates``` :
-* Create the directory ```src/main/java/PPP/domain```
-* Add the file ```[name_A].java``` with this content :
+### ```genjs/templates/src/main/java/PPP/domain/[name_A].java``` :
 ```
 package <%= gen.package %>;
 
