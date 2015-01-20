@@ -1,10 +1,10 @@
 {
   "name": "generator-genjs",
   "version": "0.0.1",
-  "description": "Yeoman generator",
-  "license": "MIT",
+  "description": "Yeoman generator for GenJS",
+  "license": "GPL v2.0",
   "main": "app/index.js",
-  "repository": "ludo1026/generator-genjs",
+  "repository": "gen-js/generator-genjs",
   "author": {
     "name": "Ludovic Chaboud",
     "email": "ludo1026@free.fr",
