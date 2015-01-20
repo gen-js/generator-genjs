@@ -73,6 +73,8 @@ var GenjsGenerator = yeoman.generators.Base.extend({
             this.mkdir(this.currentDir);
         }
 */
+        this.template('main.js',process.cwd()+'/'+this.projectName);
+
         this.template('main.js',process.cwd()+'/main.js');
         this.template('gen.js',process.cwd()+'/gen.js');
 
