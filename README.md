@@ -275,7 +275,7 @@ var entities = {
   }
 }
 ```
-The ```id``` and ```name``` properties are added for each entity and attribute and are equals to the key name in the map.
+The ```id``` and ```name``` properties are automatically added by GenJS for each entity and attribute. They are equals to the key name in the map.
 ```
 var entities = {
   "book": {
