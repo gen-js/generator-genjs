@@ -63,7 +63,7 @@ node main.js
 
 ## Model
 
-### ```genjs/model/entities.js```
+* Edit the file ```genjs/model/entities.js``` with this content :
 ```
 var entities = {
   "book": {
