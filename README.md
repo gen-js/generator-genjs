@@ -85,7 +85,7 @@ module.exports=entities;
 
 ## Templates
 
-All the templates will be in the directory ```genjs/templates```.
+All the templates are in the directory ```genjs/templates```.
 
 * In the directory ```genjs/templates```
 * Create the directory ```src/main/java/PPP/domain```
