@@ -112,7 +112,7 @@ public class <%= gen.name %> {
   <% }) %>
   
 }
-```
+```ejs
 
 * Create the directory ```src/main/java/PPP/repository```
 * Add the file ```[name_A]Repository.java```
