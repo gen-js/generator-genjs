@@ -85,7 +85,11 @@ module.exports=entities;
 
 ## Templates
 
-### ```genjs/templates/src/main/java/PPP/domain/[name_A].java``` :
+All the templates will be in the directory ```genjs/templates```.
+
+* In the directory ```genjs/templates```
+* Create the directory ```src/main/java/PPP/domain```
+* Add the file ```[name_A].java``` in this directory with this content :
 ```
 package <%= gen.package %>;
 
