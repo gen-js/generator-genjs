@@ -1,15 +1,20 @@
-# Create a new project with a GenJS project
+# Create a new project
 
-We create a project which contains the generated files.
+We create a project in the root directory which contains the generated files.
 
 This project contains a subproject called ```genjs``` which contains the templates and the model to generate the files.
+
+```
+[project]
+\- genjs
+```
 
 Create and go to the directory with the name of your project :
 ```
 mkdir [project]
 cd [project]
 ```
-, with ```[project]``` : the name of the project
+, replace ```[project]``` by the name of the project
 
 Create and go to the subdirectory which contains the GenJS generation project :
 ```
