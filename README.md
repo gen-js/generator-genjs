@@ -263,9 +263,7 @@ This chapter explained the role and syntax of each files of the GenJS project.
 
 ## Model
 
-Open the ```genjs/model/entities.js```
-
-Add an entity for ```Book``` :
+In the ```genjs/model/entities.js``` the declaration of the entity ```Book``` :
 ```
 var entities = {
   "book": {
@@ -277,19 +275,20 @@ var entities = {
   }
 }
 ```
-
-This syntax is enterpreted like this :
+The ```id``` and ```name``` properties are added for each entity and attribute and are equals to the key name in the map.
 ```
 var entities = {
-  "[entity id and name]": {
+  "book": {
+    "id": "book",
+    "name": "book",
     "attributes": {
-      "[attribute id and name]": {
+      "title": {
+        "id": "title",
+        "name": title",
         "type": "[attribute type]"
-      },
-      ...
+      }
     } 
-  },
-  ...
+  }
 }
 ```
 
