@@ -1,15 +1,17 @@
-# Create a new project
+# Projects organization
 
-We create a project in the root directory which contains the generated files.
+The generated project will be in the root directory which contains the generated files.
 
-This project contains a subproject called ```genjs``` which contains the templates and the model to generate the files.
+This generation project will be in the subdirectory ```genjs``` which contains the templates and the model to generate the files.
 
 ```
 [project]
-\- ... files of the main project
+\- ... files of the generated project
 \- genjs
    \- ... files of the generation project
 ```
+
+# Create a new project
 
 Create and go to the directory with the name of your project :
 ```
