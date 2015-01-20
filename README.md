@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # generator-genjs [![Build Status](https://secure.travis-ci.org/ludo1026/generator-genjs.png?branch=master)](https://travis-ci.org/ludo1026/generator-genjs)
 
 > [Yeoman](http://yeoman.io) generator
@@ -45,3 +46,7 @@ If you'd like to get to know Yeoman better and meet some of his friends, [Grunt]
 ## License
 
 MIT
+=======
+# generator-genjs
+Yeoman generator to start a GenJS project
+>>>>>>> 55ad859df1591070301fb74c9ca9875076de5ad1
