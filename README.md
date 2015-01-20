@@ -1,5 +1,3 @@
-# Yeoman Generator for GenJS
-
 # How-to create a project for GenJS
 
 Install yeoman and generator-genjs :
