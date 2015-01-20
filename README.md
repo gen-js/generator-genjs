@@ -71,6 +71,8 @@ yo genjs:bundles
 
 # Sample generation
 
+We will see how to define our model and our templates to generate Java classes for MongoDB and Spring Data :
+
 ## Model
 
 * Edit the file ```genjs/model/entities.js``` with this content :
