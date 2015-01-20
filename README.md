@@ -246,15 +246,16 @@ node main.js
 * install ```mongodb```
 * run ```mongodb```
 
+* import the project as a Maven Project in your IDE 
 * launch the main class ```Main.java```
 
-In the output, you can see the authors found by the AuthorRepository methods.
+In the output, you can see the authors found by the Main class.
 
 You have finished this tutorial.
 
 You can now have some explainations about the generator in the following chapter :
 
-# Exmplained sample generation
+# Explained sample generation
 
 This chapter explained the role and syntax of each files of the GenJS project.
 
