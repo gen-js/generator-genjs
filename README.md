@@ -302,9 +302,10 @@ If the template is only generated once time, you must not set expressions in the
 ### Expressions in templates of entities
 
 #### ```entity```
-If the template name has the expression ```[name]```in its name, you have access to the variable ```entity``` in the template.
 
-```entity``` targets the data of one entity in the ```entities.js``` file.
+The variable ```entity``` targets the data of one entity in the ```entities.js``` file.
+
+This ```entity``` variable is available only if the template name has the expression ```[name]```in its name.
 
 #### ```entities```
 For all templates, the variable ```entities``` targets the array which contains all entities of the ```entities.js``` file.
