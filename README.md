@@ -6,7 +6,9 @@ This project contains a subproject called ```genjs``` which contains the templat
 
 ```
 [project]
+\- ... files of the main project
 \- genjs
+   \- ... files of the generation project
 ```
 
 Create and go to the directory with the name of your project :
