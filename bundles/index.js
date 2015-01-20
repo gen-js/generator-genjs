@@ -15,31 +15,35 @@ var BundlesGenerator = module.exports = function EntityGenerator(args, options, 
   yeoman.generators.Base.apply(this, arguments);
 };
 
-util.inherits(AddGenerator, yeoman.generators.Base);
+util.inherits(BundlesGenerator, yeoman.generators.Base);
+
+BundlesGenerator.prototype.init = function init() {
+
+  var done = this.async();
+
+  var github = this.github = new GitHubApi({
+    // required
+    version: "3.0.0",
+    // optional
+    debug: false,
+    timeout: 5000
+  });
+  var repoChoices = this.repoChoices = [];
+  github.repos.getFromUser({user: "gen-js-bundles"}, function (err, data) {
+    if (err != null) {
+      console.log("error:" + err);
+    } else {
+      gutil.each(data, function (repo) {
+        //console.log(repo.name);
+        repoChoices.push({value: repo.name, name: repo.name});
+      })
+    }
+    done();
+  });
+};
+
 
 BundlesGenerator.prototype.askFor = function askFor() {
-
-    var done = this.async();
-
-    var github = this.github = new GitHubApi({
-      // required
-      version: "3.0.0",
-      // optional
-      debug: false,
-      timeout: 5000
-    });
-    var repoChoices = this.repoChoices = [];
-    github.repos.getFromUser({user:"gen-js-bundles"}, function(err, data) {
-      if(err != null) {
-        console.log("error:"+err);
-      } else {
-        gutil.each(data, function(repo) {
-          //console.log(repo.name);
-          repoChoices.push({value:repo.name,name:repo.name});
-        })
-      }
-      done();
-    });
 
     var done = this.async();
 
