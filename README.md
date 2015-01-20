@@ -2,8 +2,6 @@
 
 This is a Yeoman generator to create GenJS for code generation in javascript.
 
-You can contact me for questions : genjs1026@gmail.com
-
 # Projects organization
 
 The generated project will be in the root directory which contains the generated files.
