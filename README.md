@@ -1,9 +1,16 @@
 # How-to create a project for GenJS
 
+# Install
+
 Install yeoman and generator-genjs :
 ```
 npm install -g yo generator-genjs
 ```
+
+# Create a new project with a GenJS project
+
+We create a project which contains the generated files.
+This project contains a subproject called 'genjs' which contains the templates and the model to generate the files.
 
 Create a directory with the name of your project :
 ```
