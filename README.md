@@ -13,19 +13,16 @@ We create a project which contains the generated files.
 
 This project contains a subproject called ```genjs``` which contains the templates and the model to generate the files.
 
-Create a directory with the name of your project :
+Create and go to the directory with the name of your project :
 ```
 mkdir [project]
+cd [project]
 ```
 , with ```[project]``` : the name of the project
 
-Create a subdirectory for GenJS generation sub project :
+Create and go to the subdirectory which contains the GenJS generation project :
 ```
 mkdir genjs
-```
-
-Go to this genjs directory :
-```
 cd genjs
 ```
 
@@ -39,7 +36,19 @@ Answer the questions :
 - version of the project
 - base package
 
-The GenJS project is created
+The GenJS project is created.
+
+You should have these directories :
+```
+[project]
+\- genjs
+   \- config
+   \- model
+   \- templates
+   \- node_modules
+   \- gen.js
+   \- main.js
+```
 
 Run the GenJS generator :
 ```
