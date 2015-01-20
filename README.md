@@ -294,3 +294,18 @@ If the template is used for each entity, then the name of the template must cont
 ### Template generated only once
 
 If the template is only generated once time, you must not set expressions in the file name.
+
+### Expressions in directories
+
+```PPP``` folder name will be replaced by the base package name of the project.
+
+### Expressions in templates of entities
+
+#### ```entity```
+If the template name has the expression ```[name]```in its name, you have access to the variable ```entity``` in the template.
+
+```entity``` targets the data of one entity in the ```entities.js``` file.
+
+#### ```entities```
+For all templates, the variable ```entities``` targets the array which contains all entities of the ```entities.js``` file.
+
