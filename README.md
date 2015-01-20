@@ -331,7 +331,3 @@ For all templates, the variable ```entities``` targets the array which contains 
 Strings value have these functions :
 * str.a() : the first letter is in lowercase
 * str.A() : the first letter is in uppercase
-
-# Questions
-
-You can send an email to contact me : l.chaboud@gmail.com
