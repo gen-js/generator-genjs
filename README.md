@@ -16,7 +16,7 @@ Create a directory with the name of your project :
 ```
 mkdir [project]
 ```
-, with '[project]' : the name of the project
+, with "[project]" : the name of the project
 
 Create a subdirectory for GenJS generation sub project :
 ```
