@@ -10,13 +10,14 @@ npm install -g yo generator-genjs
 # Create a new project with a GenJS project
 
 We create a project which contains the generated files.
-This project contains a subproject called 'genjs' which contains the templates and the model to generate the files.
+
+This project contains a subproject called ```genjs``` which contains the templates and the model to generate the files.
 
 Create a directory with the name of your project :
 ```
 mkdir [project]
 ```
-, with "[project]" : the name of the project
+, with ```[project]``` : the name of the project
 
 Create a subdirectory for GenJS generation sub project :
 ```
