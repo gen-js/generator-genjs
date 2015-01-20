@@ -11,9 +11,13 @@ var git = require('gift');
 var fs = require('fs');
 var rimraf = require('rimraf');
 
-var BundlesGenerator = yeoman.generators.Base.extend({
-  init: function () {
-    this.pkg = require('../package.json');
+var BundlesGenerator = module.exports = function EntityGenerator(args, options, config) {
+  yeoman.generators.Base.apply(this, arguments);
+};
+
+util.inherits(AddGenerator, yeoman.generators.Base);
+
+BundlesGenerator.prototype.askFor = function askFor() {
 
     var done = this.async();
 
@@ -36,15 +40,6 @@ var BundlesGenerator = yeoman.generators.Base.extend({
       }
       done();
     });
-
-    this.on('end', function () {
-      if (!this.options['skip-install']) {
-        this.installDependencies();
-      }
-    });
-  },
-
-  askFor: function () {
 
     var done = this.async();
 
@@ -81,9 +76,9 @@ var BundlesGenerator = yeoman.generators.Base.extend({
       this.bundles = props.bundles;
       done();
     }.bind(this));
-  },
+};
 
-  projectfiles: function () {
+BundlesGenerator.prototype.files = function files() {
 
     // Download from github
     // Clone a given repository into a specific folder.
@@ -116,9 +111,4 @@ var BundlesGenerator = yeoman.generators.Base.extend({
         }
       }
     }
-  }
-
-
-});
-
-module.exports = BundlesGenerator;
+};
