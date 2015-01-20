@@ -59,6 +59,16 @@ Run the GenJS generator :
 node main.js
 ```
 
+# Add a bundle
+
+* Launch the ```genjs:bundles``` subgenerator :
+```
+cd genjs
+yo genjs:bundles
+```
+* Select the bundle of your choice : 
+=> these bundles are on Github : https://github.com/gen-js-bundles
+
 # Sample generation
 
 ## Model
