@@ -1,4 +1,4 @@
-var GenJS = require('/Users/ludovicchaboud/Code/workspace_genjs/genjs/genjs/lib/genjs');
+var GenJS = require('genjs');
 
 var genJS = new GenJS({
     dir: process.cwd(),
