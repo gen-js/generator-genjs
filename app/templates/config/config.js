@@ -6,7 +6,7 @@ var config = {
     isWatching: true,
     watch:{
         includes:[
-            "model", "helpers", "fragments", "templates", "config"
+            "model", "helpers", "fragments", "templates", "config", "bundles"
         ]
     }
 };
