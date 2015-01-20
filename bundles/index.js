@@ -9,6 +9,7 @@ var gutil = require("gutil");
 var GitHubApi = require("github");
 var git = require('gift');
 var fs = require('fs');
+var rimraf = require('rimraf');
 
 var BundlesGenerator = yeoman.generators.Base.extend({
   init: function () {
@@ -94,6 +95,10 @@ var BundlesGenerator = yeoman.generators.Base.extend({
           var giturl = "https://github.com/gen-js-bundles/"+bundle+".git";
           console.log('giturl',giturl );
           var dest = path.join(process.cwd(),'/bundles/',bundle);
+          if(fs.existsSync(dest)) {
+            console.log("=> Remove existing bundle : "+bundle);
+            rimraf.sync(dest);
+          }
           console.log("=> Download bundle : "+bundle+"");
           git.clone(giturl, dest, function(err, _repo) {
             if(err) {
