@@ -172,14 +172,13 @@ public interface <%= gen.name %> extends MongoRepository<<%= entity.name.A() %>,
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.2.0.RELEASE</version>
+    <version>1.2.1.RELEASE</version>
   </parent>
 
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
-      <version>1.2.1.RELEASE</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
