@@ -75,7 +75,7 @@ We will see how to define our model and our templates to generate Java classes f
 
 ## Model
 
-* Edit the file ```genjs/model/entities.js``` with this content :
+* Edit the file ```genjs/model/model.js``` with this content :
 ```
 var entities = {
   "book": {
@@ -279,7 +279,7 @@ This chapter explained the role and syntax of each files of the GenJS project.
 
 ## Model
 
-In the ```genjs/model/entities.js``` the declaration of the entity ```Book``` :
+In the ```genjs/model/model.js``` the declaration of the entity ```Book``` :
 ```
 var entities = {
   "book": {
@@ -331,12 +331,12 @@ If the template is only generated once time, you must not set expressions in the
 
 #### ```entity```
 
-The variable ```entity``` targets the data of one entity in the ```entities.js``` file.
+The variable ```entity``` targets the data of one entity in the ```model.js``` file.
 
 This ```entity``` variable is available only if the template name has the expression ```[name]```in its name.
 
 #### ```entities```
-For all templates, the variable ```entities``` targets the array which contains all entities of the ```entities.js``` file.
+For all templates, the variable ```entities``` targets the array which contains all entities of the ```model.js``` file.
 
 ### Lowercase and Uppercase
 
