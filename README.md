@@ -2,6 +2,12 @@
 
 This is a Yeoman generator to create GenJS for code generation in javascript.
 
+# Installation
+
+```
+npm install -g yo generator-genjs
+```
+
 # Projects organization
 
 The generated project will be in the root directory which contains the generated files.
