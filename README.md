@@ -12,7 +12,7 @@ Commands :
 npm install -g yo generator-genjs
 ```
 
-# Create a new project
+# Create a GenJS project
 
 In an empty folder, create the GenJS project :
 ```
@@ -30,10 +30,12 @@ You should have these directories :
 ```
 [project]
    \- config
-   \- model
-   \- templates
+       \- config.js -> generator configuration
+       \- context.js -> variables
+   \- model        -> data model
    \- node_modules
-   \- gen.js
+   \- templates    -> templates
+   \- out          -> generated files
    \- main.js
 ```
 

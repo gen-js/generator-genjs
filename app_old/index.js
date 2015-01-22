@@ -45,18 +45,6 @@ var GenjsGenerator = yeoman.generators.Base.extend({
             name:'package',
             message:'Root package',
             default: 'org.demo'
-        },{
-            type: 'list',
-            name:'projectType',
-            message:'Project type :',
-            default: 'blank',
-            choices: [{
-              value: 'blank',
-              name: 'Empty project'
-            },{
-              value: 'java',
-              name: 'Sample Java project'
-            }]
         }];
 
         this.prompt(prompts, function (props) {
@@ -66,7 +54,6 @@ var GenjsGenerator = yeoman.generators.Base.extend({
             this.projectDir = props.projectName;
             this.projectVersion = props.projectVersion;
             this.package = props.package;
-            this.projectType = props.projectType;
 
             this.config.set(props);
             this.config.save();
@@ -76,28 +63,42 @@ var GenjsGenerator = yeoman.generators.Base.extend({
     },
 
     app: function () {
-
         this.copy('package.json', process.cwd()+'/package.json');
     },
 
     projectfiles: function () {
 
-        this.template('main.js',process.cwd()+'/main.js');
-	      this.mkdir(process.cwd()+'/bundles');
-        this.mkdir(process.cwd()+'/data');
-        this.copy('data/model.js',process.cwd()+'/data/model.js');
-        this.template('data/global-variables.js',process.cwd()+'/data/global-variables.js');
-        this.mkdir(process.cwd()+'/templates');
-        this.mkdir(process.cwd()+'/out');
-
-        if(this.projectType == 'java') {
-          this.mkdir(process.cwd()+'/templates/src/main/java/PPP/domain');
-          this.mkdir(process.cwd()+'/templates/src/main/java/PPP/repository');
-          this.copy('java/templates/pom.xml',process.cwd()+'/templates/pom.xml');
-          this.copy('java/templates/src/main/java/PPP/Main.java',process.cwd()+'/templates/src/main/java/PPP/Main.java');
-          this.copy('java/templates/src/main/java/PPP/domain/[name_A].java',process.cwd()+'/templates/src/main/java/PPP/domain/[name_A].java');
-          this.copy('java/templates/src/main/java/PPP/repository/[name_A]Repository.java',process.cwd()+'/templates/src/main/java/PPP/repository/[name_A]Repository.java');
+/*
+        if(this.currentDir != null && this.currentDir != '') {
+            this.mkdir(this.currentDir);
         }
+*/
+        // this.mkdir(process.cwd()+'/'+this.projectName);
+
+        this.template('main.js',process.cwd()+'/main.js');
+        this.template('gen.js',process.cwd()+'/gen.js');
+
+	this.mkdir(process.cwd()+'/bundles');
+
+        this.mkdir(process.cwd()+'/templates');
+
+        this.mkdir(process.cwd()+'/config');
+        this.template('config/bundles.js',process.cwd()+'/config/bundles.js');
+        this.template('config/config.js',process.cwd()+'/config/config.js');
+        this.template('config/context.js',process.cwd()+'/config/context.js');
+        this.template('config/filters.js',process.cwd()+'/config/filters.js');
+        this.template('config/getGenerations.js',process.cwd()+'/config/getGenerations.js');
+        this.template('config/helpers.js',process.cwd()+'/config/helpers.js');
+
+        this.mkdir(process.cwd()+'/model');
+        this.copy('model/model.js',process.cwd()+'/model/model.js');
+        this.copy('model/stereotypes.js',process.cwd()+'/model/stereotypes.js');
+        this.copy('model/templates.js',process.cwd()+'/model/templates.js');
+
+        this.mkdir(process.cwd()+'/helpers');
+        this.copy('helpers/helper.js',process.cwd()+'/helpers/helper.js');
+
+        this.mkdir(process.cwd()+'/fragments');
     }
 });
 
