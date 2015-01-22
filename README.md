@@ -3,8 +3,7 @@
 This is a Yeoman generator to create GenJS for code generation in javascript.
 
 Commands :
-* ```yo genjs``` : create a new GenJS project
-  * After GenJS project creation, ```node main.js``` launch the generator
+* ```yo genjs``` : create a new GenJS project and after creation launch with : ```node main.js```
 * ```yo genjs:bundles``` : download templates bundles
 
 # Installation

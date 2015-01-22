@@ -1,6 +1,6 @@
 {
   "name": "generator-genjs",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Yeoman generator for GenJS",
   "license": "GPL v2.0",
   "main": "app/index.js",
