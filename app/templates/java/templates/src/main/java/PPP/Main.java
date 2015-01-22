@@ -1,12 +1,12 @@
-package <%= gen.package %>;
+package <%=gen.package%>;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
-import <%= packageBase %>.domain.Author;
-import <%= packageBase %>.repository.AuthorRepository;
+import <%=packageBase%>.domain.Author;
+import <%=packageBase%>.repository.AuthorRepository;
 
 @EnableAutoConfiguration
 @ComponentScan
