@@ -37,7 +37,7 @@ You should have these directories :
    \- main.js
 ```
 
-A sample model is defined in ```model/model.js``` with these entities : book and author.
+A sample model is already defined in ```model/model.js``` with these entities : book, author and publisher.
 
 Run the GenJS generator :
 ```
@@ -48,6 +48,7 @@ If Git is installed on your computer, you can download existing bundles :
 ```
 yo genjs:bundles
 ```
+, otherwise you can test GenJS by following the tutorial in the next chapter.
 
 # Tutorial : Sample generation
 
@@ -55,7 +56,7 @@ We will see how to define our model and our templates to generate Java classes f
 
 ## Model
 
-* Edit the file ```genjs/model/model.js``` with this content :
+* Edit the file ```model/model.js``` with this content :
 ```
 var entities = {
   "book": {
@@ -81,9 +82,9 @@ module.exports=entities;
 
 ## Templates
 
-All the templates are in the directory ```genjs/templates```.
+All the templates are in the directory ```templates```.
 
-* In the directory ```genjs/templates```
+* In the directory ```templates```
 * Create the directory ```src/main/java/PPP/domain```
 * Add the file ```[name_A].java``` in this directory with this content :
 ```
@@ -130,7 +131,7 @@ public interface <%= gen.name %> extends MongoRepository<<%= entity.name.A() %>,
 }
 ```
 
-* Add the ```pom.xml``` in the folder ```genjs/templates```
+* Add the ```pom.xml``` in the folder ```templates```
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
@@ -263,7 +264,7 @@ This chapter explained the role and syntax of each files of the GenJS project.
 
 ## Model
 
-In the ```genjs/model/model.js``` the declaration of the entity ```Book``` :
+In the ```model/model.js``` the declaration of the entity ```Book``` :
 ```
 var entities = {
   "book": {
