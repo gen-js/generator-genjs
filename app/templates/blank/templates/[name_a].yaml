@@ -1,0 +1,4 @@
+<%= entity.name %> :
+<% _.each(entity.attributes, function(attr) { %>
+  - <%= attr.name %> : <%= attr.type %>
+<% }) %>
