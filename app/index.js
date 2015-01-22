@@ -25,7 +25,7 @@ var GenjsGenerator = yeoman.generators.Base.extend({
 
         try {
             var currentPaths = process.cwd().split(path.sep);
-            var parentDir = currentPaths[currentPaths.length-2];
+            var parentDir = currentPaths[currentPaths.length-1];
         } catch(e) {
             var parentDir = "myproject";
         }
@@ -49,7 +49,7 @@ var GenjsGenerator = yeoman.generators.Base.extend({
 
         this.prompt(prompts, function (props) {
             this.currentDir = props.currentDir;
-            this.targetDir = path.join('..');
+            this.targetDir = path.join('generated');
             this.projectName = props.projectName;
             this.projectDir = props.projectName;
             this.projectVersion = props.projectVersion;

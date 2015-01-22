@@ -1,6 +1,10 @@
-# generator-genjs
+# generator-genjs *** Beta ***
 
 This is a Yeoman generator to create GenJS for code generation in javascript.
+
+Commands :
+* ```yo genjs``` : create a new GenJS project
+* ```yo genjs:bundles``` : download templates bundles
 
 # Installation
 
@@ -8,35 +12,9 @@ This is a Yeoman generator to create GenJS for code generation in javascript.
 npm install -g yo generator-genjs
 ```
 
-# Projects organization
-
-The generated project will be in the root directory which contains the generated files.
-
-This generation project will be in the subdirectory ```genjs``` which contains the templates and the model to generate the files.
-
-```
-[project]
-\- ... files of the generated project
-\- genjs
-   \- ... files of the generation project
-```
-
 # Create a new project
 
-Create and go to the directory with the name of your project :
-```
-mkdir [project]
-cd [project]
-```
-, replace ```[project]``` by the name of the project
-
-Create and go to the subdirectory which contains the GenJS generation project :
-```
-mkdir genjs
-cd genjs
-```
-
-Create the GenJS project :
+In an empty folder, create the GenJS project :
 ```
 yo genjs
 ```
@@ -51,7 +29,6 @@ The GenJS project is created.
 You should have these directories :
 ```
 [project]
-\- genjs
    \- config
    \- model
    \- templates
@@ -60,9 +37,16 @@ You should have these directories :
    \- main.js
 ```
 
+A sample model is defined in ```model/model.js``` with these entities : book and author.
+
 Run the GenJS generator :
 ```
 node main.js
+```
+
+If Git is installed on your computer, you can download existing bundles :
+```
+yo genjs:bundles
 ```
 
 # Tutorial : Sample generation
