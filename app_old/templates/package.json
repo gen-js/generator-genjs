@@ -1,0 +1,7 @@
+{
+  "name": "<%= projectName %>",
+  "version": "<%= projectVersion %>.0",
+  "dependencies": {
+  	"genjs": "~0.1.7"
+  }
+}
