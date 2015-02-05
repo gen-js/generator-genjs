@@ -2,6 +2,8 @@
   "name": "<%= projectName %>",
   "version": "<%= projectVersion %>.0",
   "dependencies": {
-  	"genjs": "0.2.2"
+  	"genjs": "~0.2.4",
+    "lodash": "*",
+    "js-yaml": "*"
   }
 }
